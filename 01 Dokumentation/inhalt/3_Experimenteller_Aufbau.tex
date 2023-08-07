@@ -1,5 +1,49 @@
 \chapter{Experimenteller Aufbau}
 
+In diesem Kapitel wird darauf eingegangen, wie die Proben erstellt werden, welche Druckparameter eine große Rolle Spielen und wie diese gefunden werden. Ausserdem wird erklärt, welche Messverfahren und welche Messgeräte eingesetzt werden.\\
+
+
+\section{Auswahl der Druckparameter}
+
+Beim verwenden eines 3D-Druckers ist es notwendig die Druckparameter passend zum gewünschten Ergebnis auszuwählen. Hierbei kommt es auf die gewünschte Geometrie der späteren Bauteile und auf das verwendete Material an. Im Vorfeld dieser Arbeit ist bereits eine Wissenschaftliche Arbeit zum Thema \glqq FDM-Druck mit PT+A 316L Metallfilament Untersuchung der Druckparameter am Raise 3D Pro 2\grqq erstellt. Das Ergebnis dieser Arbeit lässt sich in Tabelle aus \autoref{label} darstellen.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Add caption}
+      \begin{tabular}{|l|l|r|}
+      \toprule
+      \textbf{Slicing-Paramater} & \textbf{Empfehlung} & \multicolumn{1}{l|}{\textbf{Hinweise (IdeaMaker)}} \\
+      \midrule
+      Drucktemperatur & 130°C & \multicolumn{1}{p{12.555em}|}{+- 5 °C möglich} \\
+      \midrule
+      Druckgeschwindigkeit & 30-60 mm/s & \multicolumn{1}{p{12.555em}|}{Füllung schnell, Konturen langsam} \\
+      \midrule
+      Heizbetttemperatur & 40 °C & \multicolumn{1}{p{12.555em}|}{Gute Ablösung und Schichthaftung} \\
+      \midrule
+      Rückzugsgeschwindigkeit & 20 mm/s & \multicolumn{1}{p{12.555em}|}{0,5 mm Rückzugsmenge} \\
+      \midrule
+      Materialflussrate & \multicolumn{1}{r|}{90\%} & \multicolumn{1}{p{12.555em}|}{Bei Extrusionsbreite 0,4 mm} \\
+      \midrule
+      Füllflussrate & \multicolumn{1}{r|}{90\%} & \multicolumn{1}{p{12.555em}|}{Vorsicht: Reiter „Fortgeschritten“ überschreibt Flussrateneinstellungen} \\
+      \midrule
+      Xy-Größenkompensation für Konturen & 0,1 mm &  \\
+      \midrule
+      Xy-Größenkompensation für Bohrungen & 0,06 mm &  \\
+      \midrule
+      Füllüberlappung & \multicolumn{1}{r|}{10\%} & \multicolumn{1}{p{12.555em}|}{Höher falls Ghosting / Pillowing eintritt} \\
+      \midrule
+      Schichthöhe & 0,3 mm &  \\
+      \bottomrule
+      \end{tabular}%
+    \label{tab:addlabel}%
+  \end{table}%
+  
+  Essentielle Parameter werden in dieser Arbeit jeweils mit Testdrucken bestimmt. Zur Bestimmung der Drucktemperatur wird ein sogenannter \textit{Heat Tower} gedruckt. Dabei wird in bestimmten Abständen die Temperatur in 5°C-Schritten abgesenkt. Mit dem gedruckten Bauteil lässt sich dann die geeigneteste Temperatur ablesen. \Autocite{M.Mickan}.\\
+
+  Diese Werte werden somit zu Beginn dieser Arbeit übernommen und erste Druckversuche werden durchgeführt. 
+
+\autocite{M.Mickan}
+
 3.1 Auswahl der Druckparameter\\
 3.2 Probenherstellung und -messung\\
 3.3 Messverfahren und -geräte\\
