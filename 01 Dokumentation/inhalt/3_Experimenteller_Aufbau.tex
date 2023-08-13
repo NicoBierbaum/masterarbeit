@@ -5,45 +5,71 @@ In diesem Kapitel wird darauf eingegangen, wie die Proben erstellt werden, welch
 
 \section{Auswahl der Druckparameter}
 
-Beim verwenden eines 3D-Druckers ist es notwendig die Druckparameter passend zum gewünschten Ergebnis auszuwählen. Hierbei kommt es auf die gewünschte Geometrie der späteren Bauteile und auf das verwendete Material an. Im Vorfeld dieser Arbeit ist bereits eine Wissenschaftliche Arbeit zum Thema \glqq FDM-Druck mit PT+A 316L Metallfilament Untersuchung der Druckparameter am Raise 3D Pro 2\grqq erstellt. Das Ergebnis dieser Arbeit lässt sich in Tabelle aus \autoref{label} darstellen.
+Beim verwenden eines 3D-Druckers ist es notwendig die Druckparameter passend zum gewünschten Ergebnis auszuwählen. Hierbei kommt es auf die gewünschte Geometrie der späteren Bauteile und auf das verwendete Material an. Im Vorfeld dieser Arbeit ist bereits eine Wissenschaftliche Arbeit zum Thema \glqq FDM-Druck mit PT+A 316L Metallfilament Untersuchung der Druckparameter am Raise 3D Pro 2\grqq erstellt. Das Ergebnis dieser Arbeit lässt sich in Tabelle aus \autoref{ursprüngliche Werte} darstellen.
 
 \begin{table}[htbp]
     \centering
-    \caption{Add caption}
-      \begin{tabular}{|l|l|r|}
+    \caption{Druckparameter - gegeben aus \autocite{M.Mickan}}
+      \begin{tabular}{llr}
       \toprule
       \textbf{Slicing-Paramater} & \textbf{Empfehlung} & \multicolumn{1}{l|}{\textbf{Hinweise (IdeaMaker)}} \\
       \midrule
-      Drucktemperatur & 130°C & \multicolumn{1}{p{12.555em}|}{+- 5 °C möglich} \\
-      \midrule
-      Druckgeschwindigkeit & 30-60 mm/s & \multicolumn{1}{p{12.555em}|}{Füllung schnell, Konturen langsam} \\
-      \midrule
-      Heizbetttemperatur & 40 °C & \multicolumn{1}{p{12.555em}|}{Gute Ablösung und Schichthaftung} \\
-      \midrule
-      Rückzugsgeschwindigkeit & 20 mm/s & \multicolumn{1}{p{12.555em}|}{0,5 mm Rückzugsmenge} \\
-      \midrule
-      Materialflussrate & \multicolumn{1}{r|}{90\%} & \multicolumn{1}{p{12.555em}|}{Bei Extrusionsbreite 0,4 mm} \\
-      \midrule
-      Füllflussrate & \multicolumn{1}{r|}{90\%} & \multicolumn{1}{p{12.555em}|}{Vorsicht: Reiter „Fortgeschritten“ überschreibt Flussrateneinstellungen} \\
-      \midrule
+      Drucktemperatur & 130°C & \multicolumn{1}{p{12.555em}}{+- 5 °C möglich} \\
+      Druckgeschwindigkeit & 30-60 mm/s & \multicolumn{1}{p{12.555em}}{Füllung schnell, Konturen langsam} \\
+      Heizbetttemperatur & 40 °C & \multicolumn{1}{p{12.555em}}{Gute Ablösung und Schichthaftung} \\
+      Rückzugsgeschwindigkeit & 20 mm/s & \multicolumn{1}{p{12.555em}}{0,5 mm Rückzugsmenge} \\
+      Materialflussrate & \multicolumn{1}{r}{90\%} & \multicolumn{1}{p{12.555em}}{Bei Extrusionsbreite 0,4 mm} \\
+      Füllflussrate & \multicolumn{1}{r}{90\%} & \multicolumn{1}{p{12.555em}}{Vorsicht: Reiter „Fortgeschritten“ überschreibt Flussrateneinstellungen} \\
       Xy-Größenkompensation für Konturen & 0,1 mm &  \\
-      \midrule
       Xy-Größenkompensation für Bohrungen & 0,06 mm &  \\
-      \midrule
-      Füllüberlappung & \multicolumn{1}{r|}{10\%} & \multicolumn{1}{p{12.555em}|}{Höher falls Ghosting / Pillowing eintritt} \\
-      \midrule
+      Füllüberlappung & \multicolumn{1}{r}{10\%} & \multicolumn{1}{p{12.555em}}{Höher falls Ghosting / Pillowing eintritt} \\
       Schichthöhe & 0,3 mm &  \\
       \bottomrule
       \end{tabular}%
-    \label{tab:addlabel}%
+    \label{ursprüngliche Werte}%
   \end{table}%
   
-  Essentielle Parameter werden in dieser Arbeit jeweils mit Testdrucken bestimmt. Zur Bestimmung der Drucktemperatur wird ein sogenannter \textit{Heat Tower} gedruckt. Dabei wird in bestimmten Abständen die Temperatur in 5°C-Schritten abgesenkt. Mit dem gedruckten Bauteil lässt sich dann die geeigneteste Temperatur ablesen. \Autocite{M.Mickan}.\\
+Essentielle Parameter werden in dieser Arbeit jeweils mit Testdrucken bestimmt. Zur Bestimmung der Drucktemperatur wird ein sogenannter \textit{Heat Tower} gedruckt. Dabei wird in bestimmten Abständen die Temperatur in 5°C-Schritten abgesenkt. Mit dem gedruckten Bauteil lässt sich dann die geeigneteste Temperatur ablesen. \Autocite{M.Mickan}.\\
 
-  Diese Werte werden somit zu Beginn dieser Arbeit übernommen und erste Druckversuche werden durchgeführt. 
+Diese Werte werden somit zu Beginn dieser Arbeit übernommen und erste Druckversuche werden durchgeführt. Dazu wird ein Würfel mit einer Kantenlänge von 10mm gewählt. Das Ergebnis ist in \autoref{erster Druck - Isometrie} und \autoref{erster Druck - Seitenansicht} dargestellt.
 
-\autocite{M.Mickan}
 
-3.1 Auswahl der Druckparameter\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{bilder/Testdruck auf Raise Pro 3D.png}
+        \caption[Testdruck von dem Raise3D Pro2 Plus - Isometrische Ansicht] {Testdruck von dem Raise3D Pro2 Plus - Isometrische Ansicht (Eigene Darstellung)}
+	\label{erster Druck - Isometrie}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{bilder/Testdruck auf Raise Pro 3D Seitenansicht - Draufsicht.png}
+        \caption[Erster Testdruck mit dem Raise3D Pro2 Plus - Seitenansicht und Draufsicht] {Erster Testdruck mit dem Raise3D Pro2 Plus -Draufsicht (l) und Seitenansicht (r) (Geschwindigkeit: 60mm/s; Schichthöhe: 0,4mm) (Eigene Darstellung)}
+	\label{erster Druck - Seitenansicht}
+\end{figure}
+
+Erkennbar ist hier deutlich, die ungenauigkeit des Drucks dargestellt. Dies lässt sich sehr gut in \autoref{erster Druck - Seitenansicht} an den Ecken in der rechten Draufsicht erkennen. Das Symptom der zu stark abgerundeten Ecken ist auf das Fehlen von \textit{linear advanced} aus \autoref{linear advanced} zurückzuführen. Die Extrusionsrate ist nicht an das Be- und Entschleunigungsverhalten des Druckkopfs angepasst. Dadurch ist an den Ecken, in denen die Geschwindigkeit langsamer ist, mehr Material aufgetragen. Die Einstellung des \textit{linear advanced} lässt sich bei diesem Drucker nicht einstellen und die \textit{Firmware} ist nicht \textit{Open Source}.
+
+Bei Verringerung der Geschwindigkeit von 60mm/s auf 20mm/s ist dieser Effekt deutlich verringert. In \autoref{zweiter Druck - Isometrie} ist das Ergebnis der Verringerung der Geschwindigkeit und der Schichthöhe dargestellt. Doch diese Optimierung geht zu Lasten der gesamten Druckzeit. \textbf{HIER DieIE DRUCKZEIT BEREHCNEN!!}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{bilder/2. Testdruck auf Raise Pro 3D Seitenansicht - Draufsicht.png}
+        \caption[Zweiter Testdruck mit dem Raise3D Pro2 Plus - Isometrische Ansicht] {Zweiter Testdruck mit dem Raise3D Pro2 Plus -Draufsicht (l) und Seitenansicht (r) (Geschwindigkeit: 20mm/s; Schichthöhe: 0,1mm) (Eigene Darstellung)}
+	\label{zweiter Druck - Isometrie}
+\end{figure}
+
+\subsection{Verwendung des Prusa i3 MK3S+}
+
+Mit dem Raise 3D Pro 2 sind die Ergebnisse aufgrund der fehlenden Einstellmöglichkeit des \textit{linear advanced} nicht zufriedenstellend. Da auch die verlängerte Druckzeit bei verringerter Geschwindigkeit nicht zufriedenstellend ist, wird in dieser Arbeit auf den \textit{i3 MK3S+} der Frima \textit{Prusa} zurückgegriffen. Dieser hat ebenfalls wie der \textit{Raise3D}-Drucker einen Druckkopf mit Direktextruder. Dies ist vom Filamenthersteller aufgrund des spröden Materials empfohlen.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{bilder/Erster Testdruck mit Prusa.png}
+        \caption[Erster [20mm/s] und zweiter [50mm/s] Testdruck mit dem Prusa] {Erster [20mm/s] und zweiter [50mm/s] Testdruck mit dem Prusa (Eigene Darstellung)}
+	\label{Erster Testdruck Prusa}
+\end{figure}
+
+Der erste Testdruck mit dem \textit{Prusa} (siehe\autoref{Erster Testdruck Prusa} links)
+
 3.2 Probenherstellung und -messung\\
 3.3 Messverfahren und -geräte\\
