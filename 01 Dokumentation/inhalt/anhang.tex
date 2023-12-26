@@ -101,26 +101,34 @@
   \end{table}%
   \FloatBarrier
   
+  % \includepdf[pages={1,2}]{bilder/Zug Flachprobe_liegend_S.pdf}
+  \begin{figure}[ht]
+    \includegraphics[width=1\textwidth]{bilder/Zug Flachprobe_liegend_S.pdf}
+  \end{figure}
+  \FloatBarrier
+  
   \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{bilder/Zug Flachprobe_liegend_S.pdf}
+    \includegraphics[width=1\textwidth]{bilder/Zug Flachprobe_liegend_S_S2.pdf}
     \caption{Zugproben liegend gedruckt - FH Münster}
     \label{ZugprobenS}
   \end{figure}
-  
+  \FloatBarrier
   \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{bilder/Zug Flachprobe_liegend_GS.pdf}
-    \caption{Zugproben liegend gedruckt - L.B. Bohle}
+    \caption{Zugproben liegend gedruckt - L.B. Bohle} 
     \label{ZugprobenGS}
   \end{figure}
-  
+  \FloatBarrier
+
   \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{bilder/Zug Flachprobe_stehend_P.pdf}
     \caption{Zugproben stehend gedruckt, nur Perimeter - L.B. Bohle}
     \label{ZugprobenP}
   \end{figure}
+  \FloatBarrier
   
   \begin{figure}[ht]
     \centering
@@ -128,7 +136,15 @@
     \caption{Zugproben stehend gedruckt, 1 Perimeter - rest Infill - L.B. Bohle}
     \label{ZugprobenT}
   \end{figure}
-  
+  \FloatBarrier
+ 
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/Werkstoff_Datenblatt_1.4404.pdf}
+    \caption{Werkstoff Datenblatt - Edelstahl 1.4404 \autocite{AGSTSteel:1.4404}}
+    \label{Datenblatt1.4404}
+  \end{figure}
+  \FloatBarrier
   
 
 \section{Anleitungen}
@@ -175,7 +191,7 @@ Hinweis: Niemals heiße Bauteile mit den Händen berühren!
       \end{figure}
       \FloatBarrier
 
-    \item In diesem Schritt wird der Extruder teildemontiert. Dazu Wird vorsichtig der Extrudermotor in Pfeilrichtung (siehe \autoref{Zerlegen1}) gezogen. Sobald dieser lose ist, wird der untere Teil mit herausgezogen. Es muss eine Lücke, wie in \autoref{Zerlegen1} in gelb dargestellt, zu sehen sein.\\
+    \item In diesem Schritt wird der Extruder teildemontiert. Dazu wird der Extrudermotor vorsichtig in Pfeilrichtung (siehe \autoref{Zerlegen1}) gezogen. Sobald dieser lose ist, wird der untere Teil mit herausgezogen. Es muss eine Lücke, wie in \autoref{Zerlegen1} in gelb dargestellt, zu sehen sein.\\
           Nun kann das Hotend vorsichtig von unten entnommen werden (siehe \autoref{Zerlegen2}). Dabei auf die Kabel des Hotends achten, sie dürfen nicht beschädigt werden.
       \begin{figure}[h] 
         \centering
@@ -184,7 +200,7 @@ Hinweis: Niemals heiße Bauteile mit den Händen berühren!
       \begin{figure}[h]
         \centering
         \begin{subfigure}[b]{0.45\textwidth}
-          \includegraphics[width=0.5\linewidth]{bilder/Anleitung - Zerlegen1.jpg}
+          \includegraphics[width=0.8\linewidth]{bilder/Anleitung - Zerlegen1.jpg}
           \caption[Anleitung: Zerlegung des Extruders] {Zerlegung des Extruders (Quelle: \autocite{Prusa})}
         \label{Zerlegen1}
         \end{subfigure}
@@ -197,7 +213,7 @@ Hinweis: Niemals heiße Bauteile mit den Händen berühren!
       \end{figure}
       \FloatBarrier
 
-    \item Jetzt kann das PTFE-Schlauchstück mithilfe der entfernt werden. Dazu mit den Fingern den, in \autoref{PTFEEE} mit blauem Pfeil markierten, Ring herunterdrücken und den Schlauch mit der beiliegenden Zange herausziehen. Nun kann die Verstopfung in diesem Schlauchstück mit einem langen, dünnen Hilfsmittel (z.B. einem Imbussschlüssel) entfernt werden.
+    \item Jetzt kann das PTFE-Schlauchstück mithilfe der Spitzzange entfernt werden. Dazu mit den Fingern den, in \autoref{PTFEEE} mit blauem Pfeil markierten, Ring herunterdrücken und den Schlauch mit der Zange herausziehen. Nun kann die Verstopfung in diesem Schlauchstück mit einem langen, dünnen Hilfsmittel (z.B. einem Imbussschlüssel) entfernt werden.
       \begin{figure}[h] 
         \centering
         \includegraphics[width=0.5\linewidth]{bilder/Anleitung - Entfernen des PTFE-Schlauchs.jpg}
@@ -207,6 +223,6 @@ Hinweis: Niemals heiße Bauteile mit den Händen berühren!
       \FloatBarrier
 
     \item Der Zusammenbau geschieht in umgekehrter Reihenfolge. Wichtig ist, dass der PTFE-Schlauch mit dem angespitztem Ende wieder in den Extruder hineingeführt wird.
-    \item Die in gelb dargestellte Schra
-    \item Wenn alle Teile wieder zusammengebaut und die Schrauben wieder festgezogen sind, kann die Düse auf 180°C aufgeheizt werden. Sobald die Temperatur erreicht ist, wird das Ende der Filamentrolle schräg mit der Zange abgeschnitten. Um das  
+    \item In vielen Fällen sollte zusätzlich die Düse vom Heatblock getrennt werden, um auch dort altes Filament zu entfernen.
+    \item Wenn alle Teile wieder zusammengebaut und die Schrauben wieder festgezogen sind, kann die Düse auf 180°C aufgeheizt werden. Sobald die Temperatur erreicht ist, wird das Ende der Filamentrolle schräg mit der Zange abgeschnitten, um das Einführen einfacher zu gestalten. Nun kann am LCD-Display \glqq Filament laden\grqq gedrückt und das Filament in die dafür vorgesehene Öffnung am Druckkopf eingeführt werden.
 \end{itemize}

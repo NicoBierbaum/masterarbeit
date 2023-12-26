@@ -5,7 +5,7 @@ In diesem Kapitel wird darauf eingegangen, wie die Proben erstellt werden, welch
 
 \section{Auswahl der Druckparameter}
 
-Beim verwenden eines 3D-Druckers ist es notwendig die Druckparameter passend zum gewünschten Ergebnis auszuwählen. Hierbei kommt es auf die gewünschte Geometrie der späteren Bauteile und auf das verwendete Material an. Im Vorfeld dieser Arbeit ist bereits eine Wissenschaftliche Arbeit zum Thema \glqq FDM-Druck mit PT+A 316L Metallfilament Untersuchung der Druckparameter am Raise 3D Pro 2\grqq erstellt. Das Ergebnis dieser Arbeit lässt sich in Tabelle aus \autoref{ursprüngliche Werte} darstellen.
+Beim verwenden eines 3D-Druckers ist es notwendig die Prozessparameter passend zum gewählten Filament anzupassen. Besonders bei Filamenten die dem Standard (PLA, PETG, ABS, etc.) abweichen, ist dies eine Herausforderung, da ein voreingestelltes Profil für den gewünschten 3D-Drucker nicht garantiert ist. Im Vorfeld dieser Arbeit ist bereits eine Wissenschaftliche Arbeit zum Thema \glqq FDM-Druck mit PT+A 316L Metallfilament Untersuchung der Druckparameter am Raise 3D Pro 2\grqq erstellt. Das Ergebnis dieser Arbeit lässt sich in Tabelle aus \autoref{ursprüngliche Werte} darstellen.
 
 \begin{table}[htbp]
     \centering
@@ -49,7 +49,7 @@ Diese Werte werden somit zu Beginn dieser Arbeit übernommen und erste Druckvers
 
 Erkennbar ist hier deutlich, die ungenauigkeit des Drucks dargestellt. Dies lässt sich sehr gut in \autoref{erster Druck - Seitenansicht} an den Ecken in der rechten Draufsicht erkennen. Das Symptom der zu stark abgerundeten Ecken ist auf das Fehlen von \textit{linear advanced} aus \autoref{linear advanced} zurückzuführen. Die Extrusionsrate ist nicht an das Be- und Entschleunigungsverhalten des Druckkopfs angepasst. Dadurch ist an den Ecken, in denen die Geschwindigkeit langsamer ist, mehr Material aufgetragen. Die Einstellung des \textit{linear advanced} lässt sich bei diesem Drucker nicht einstellen und die \textit{Firmware} ist nicht \textit{Open Source}.
 
-Bei Verringerung der Geschwindigkeit von 60mm/s auf 20mm/s ist dieser Effekt deutlich verringert. In \autoref{zweiter Druck - Isometrie} ist das Ergebnis der Verringerung der Geschwindigkeit und der Schichthöhe dargestellt. Doch diese Optimierung geht zu Lasten der gesamten Druckzeit. \textbf{HIER DieIE DRUCKZEIT BEREHCNEN!!}
+Bei Verringerung der Geschwindigkeit von 60mm/s auf 20mm/s ist dieser Effekt deutlich verringert. In \autoref{zweiter Druck - Isometrie} ist das Ergebnis der Verringerung der Geschwindigkeit und der Schichthöhe dargestellt. Doch diese Optimierung geht zu Lasten der gesamten Druckzeit. 
 
 \begin{figure}[h]
 	\centering

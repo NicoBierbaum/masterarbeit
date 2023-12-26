@@ -8,6 +8,7 @@
 \usepackage{subcaption}
 %\usepackage{lmodern}
 \usepackage{cmbright}
+\usepackage{enumitem}  				% Paket für benutzerdefinierte Aufzählungen
 \usepackage[OT1]{fontenc}
 \usepackage{blindtext}				% Mit \blindtext wird Dummytext eingefügt
 \usepackage{mdwlist}				% kompaktere Listen mit itemize\cdot und co
@@ -36,20 +37,19 @@
 \usepackage{caption}                % Erweiterte Einstellung für Beschriftungen
 \usepackage{array}                  % erweiterte Optionen
 \usepackage{icomma}                 % verringert den Abstabd hinter dem Komma bei Kommawerten
-\usepackage{wrapfig}				% Textumflossene Bilder innerhalb des Dokumentes
 \usepackage{setspace}				% Zeilenabstand definieren
 
 %% PDF Optionen (Verweise und co) -----------------------------------------------------------------
+\usepackage{pdfpages}
 \usepackage{ifxetex}
 \ifxetex
 \usepackage[babel, german=quotes]{csquotes}
-\usepackage{xltxtra}
+%\usepackage{xltxtra}
 \usepackage{etex}
 \usepackage[dvipsnames]{pstricks}
 \usepackage{pst-plot}
 \usepackage{pstricks-add}
 \usepackage{auto-pst-pdf}
-\usepackage[pdfa, xetex]{hyperref}
 \else
 \usepackage[utf8]{inputenc}			% UTF-8 encoding
 \usepackage[babel, german=quotes]{csquotes}
@@ -58,10 +58,10 @@
 \fi
 %% Angaben für die PDF-Datei
 \hypersetup{
-	pdfauthor = {Max Mustermann},
-	pdftitle =  {Businessplan fiktives Unternehmen ShotBot},
-	pdfsubject = {Projektarbeit},
- 	pdfkeywords = {Keyword1, Keyword2, ...},
+	pdfauthor = {Nico Bierbaum},
+	pdftitle =  {Wissenschaftliche Arbeit},
+	pdfsubject = {Dichte- und Schwindungsauswertung von 316L gedruckten Teilen im FDM-Prozess},
+ 	pdfkeywords = {3D-Druck, Filament, Metall, Dichte, Zugversuch, Schwindung},
  	pdfcreator = {LaTeX with hyperref package}
 }
 %\setlength\parindent{0pt}

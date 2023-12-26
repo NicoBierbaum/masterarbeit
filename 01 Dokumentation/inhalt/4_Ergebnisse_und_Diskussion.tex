@@ -12,7 +12,7 @@ Aus diesen Werten lassen sich die Schwindungen der einzelnen Parameter nach jede
     \caption{Schrumpfung der Würfelproben im Braun- und Sinterteil}
       \begin{tabular}{ccccccc}
       \toprule
-      \textbf{Teil} & \multicolumn{1}{c}{\textbf{h}} & \multicolumn{1}{c}{\textbf{l1}} & \multicolumn{1}{c}{\textbf{l2}} & \multicolumn{1}{c}{\textbf{V}} & \multicolumn{1}{c}{\textbf{m}} & \multicolumn{1}{c}{\textbf{Dichte}} \\
+      \textbf{Teil} & \multicolumn{1}{c}{\textbf{Z}} & \multicolumn{1}{c}{\textbf{X}} & \multicolumn{1}{c}{\textbf{Y}} & \multicolumn{1}{c}{\textbf{Volumen}} & \multicolumn{1}{c}{\textbf{Masse}} & \multicolumn{1}{c}{\textbf{Dichte}} \\
         \textbf{Braunteil} & 0 & 2,9 & 2,9 & 5,8 & 4,8 & -0,8 \\
         \textbf{Sinterteil} & 13,7 & 15,4 & 15,8 & 38,6 & 8 & -50 \\
       \bottomrule
@@ -30,7 +30,7 @@ Von den liegenden Zugproben wurden auch Masse und Gewicht gemessen. Daher lassen
     \caption{Schrumpfung der liegenden Zugproben im Sinterteil}
       \begin{tabular}{ccccccc}
       \toprule
-      \textbf{Teil} & \multicolumn{1}{c}{\textbf{l1}} & \multicolumn{1}{c}{\textbf{l2}} & \multicolumn{1}{c}{\textbf{V}} & \multicolumn{1}{c}{\textbf{m}} & \multicolumn{1}{c}{\textbf{Dichte}} \\
+      \textbf{Teil} & \multicolumn{1}{c}{\textbf{Z}} & \multicolumn{1}{c}{\textbf{X}} & \multicolumn{1}{c}{\textbf{Y}} & \multicolumn{1}{c}{\textbf{Volumen}} & \multicolumn{1}{c}{\textbf{Masse}} & \multicolumn{1}{c}{\textbf{Dichte}} \\
         \textbf{Sinterteil} & 13,7 & 15,4 & 15,8 & 38,6 & 8 & -50 \\
       \bottomrule
       \end{tabular}%
@@ -53,7 +53,28 @@ Geplant war es, die Zugproben liegend und stehend auf der Druckoberfläche zu dr
 
 Da die Querschnittsfläche einer stehenden Zugprobe deutlich kleiner ist, als bei den liegenden Zugproben, führte dies zu Problemen. Daher wird sich im Rahmen dieser Arbeit auf den Vergleich zwischen den liegenden Zugproben hinsichtlich der mechanischen Kennwerte bezogen.
 Im Slicer sind dann in x- und y-Richtung um 17\% vergrößert und in z-Richtung sind sie 20\% größer gedruckt. Damit ist sichergestellt, dass die Zugproben im gesinterten Zustand die DIN-Norm einhalten. Die fertig gesinterten Zugproben werden dann in eine Zugprüfmaschine an beide Seiten eingespannt und bis zur Zerstörung gezogen. Die benötigte Kraft, sowie die entstehende Längung bilden die Grundlage für das entstehende Spannungs-Dehnungs-Diagramm.
-Das zugehörige Spannungs-Dehnungs-Diagramm ist in \autoref{label}
-
+Das zugehörige Spannungs-Dehnungs-Diagramm ist in \autoref{ZugprobenS} dargestellt, anzumerken ist an dieser Stelle, dass nur \autoref{ZugprobenS} Zugproben enthält, die im Rahmen dieser Arbeit gedruckt sind. Die anderen drei Ergebnisse \autoref{ZugprobenGS}, \autoref{ZugprobenP} und \autoref{ZugprobenT} sind Zugproben, die in der Firma \textit{L.B. Bohle} gedruckt sind. Sie dienen nur als Vergleich.
+ 
 \section{Vergleich der ermittelten Werte}
 
+
+
+
+\begin{table}[h]
+  \centering
+  \caption{Ergebnisse Zugversuch}
+  \begin{tabular}{cccc}
+  \toprule
+  \textbf{Serie} & \textbf{R$_{\textsubscript{p0.2}}$ [MPa]} & \textbf{R$_{\textsubscript{m}}$ [MPa]} & \textbf{A$_{\textsubscript{25 mm}}$ [mm]} \\
+  \midrule
+  liegend (FH-MS) & 157 & 346 & 23,2 \\
+  liegend (L.B. B.) & 178 & 400 & 25,4 \\
+  Datenblatt 1.4404 \autocite{AGSTSteel:1.4404} & $\leq$ 200 & 500-700 & 40 \\
+  \midrule
+  Abweichungen (\%) 
+    & -21,5 & -31,2 & -42,0 \\
+    & -11,0 & -20,0 & -37,5 \\
+  \bottomrule
+  \end{tabular}
+  \label{BeispielTabelle}
+\end{table}
