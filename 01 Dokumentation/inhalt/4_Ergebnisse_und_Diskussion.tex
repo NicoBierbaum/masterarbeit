@@ -1,11 +1,21 @@
 \chapter{Ergebnisse und Diskussion}
 
-Im Fokus dieses Kapitels stehen die Ergebnisse und Diskussionen im Kontext der Evaluierung von Dichteeigenschaften und Schrumpfungsverhalten des 316L-Edelstahls von \textit{PT+A} für den 3D-Druck mittels Fused Deposition Modeling (FDM). Im vorangegangenem Kapitel wird die Erstellung der Proben und die Wissenschaftlichen Grundlagen erläutert.
+Im Fokus dieses Kapitels stehen die Ergebnisse und Diskussionen im Kontext der Evaluierung von Dichteeigenschaften und Schrumpfungsverhalten des 316L-Edelstahls von \textit{PT+A} für den 3D-Druck mittels Fused Deposition Modeling (FDM). Im vorangegangenen Kapitel wird die Erstellung der Proben und die wissenschaftlichen Grundlagen erläutert.
 
 \section{Dichte- und Schwindungsauswertungen der gedruckten Proben}
-
+\label{Dichte- und Schwindung}
 In diesem Unterkapitel werden die gedruckten Würfel- und Zugproben hinsichtlich der Dichte untersucht. Diese Messung wird einmal im Grün-, sowie im Braun-, als auch im späteren Sinterteil durchgeführt. Die Ergebnisse dieser Auswertung ist in \autoref{Grünteilmaße} bis \autoref{Sinterteilmaße} dargestellt.
 Aus diesen Werten lassen sich die Schwindungen der einzelnen Parameter nach jedem Prozess ableiten. Dargestellt sind diese Werte in \autoref{Schrumpfung}.
+Die Ergebnisse der Dichtemessung ist in \autoref{DichtewerteTestwürfel} dargestellt. Im Durchschnitt beträgt die Dichte 6,87 \(\text{g/cm}^3\).
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=0.8\linewidth]{bilder/img_Dichtewerte der Testwürfel.png}
+        \caption[Dichtewerte der Testwürfel als Metallteil] {Dichtewerte der Testwürfel als Metallteil (Quelle: eigene Darstellung)}
+  \label{DichtewerteTestwürfel}
+\end{figure}
+%\FloatBarrier
+
 
 \begin{table}[h]
     \centering
@@ -45,20 +55,32 @@ Geplant war es, die Zugproben liegend und stehend auf der Druckoberfläche zu dr
 
 \begin{figure}[h] 
   \centering
-  \includegraphics[width=0.5\linewidth]{bilder/Screenshot 2023-11-01 171423.png}
+  \includegraphics[width=0.4\linewidth]{bilder/Screenshot 2023-11-01 171423.png}
         \caption[Stehende Zugprobe im Cura-Slicer] {Stehende Zugprobe im Cura-Slicer (Quelle: \autocite{Prusa})}
   \label{stehende Zugprobe}
 \end{figure}
 \FloatBarrier
 
-Da die Querschnittsfläche einer stehenden Zugprobe deutlich kleiner ist, als bei den liegenden Zugproben, führte dies zu Problemen. Daher wird sich im Rahmen dieser Arbeit auf den Vergleich zwischen den liegenden Zugproben hinsichtlich der mechanischen Kennwerte bezogen.
+Da die Querschnittsfläche einer stehenden Zugprobe deutlich kleiner ist, als bei den liegenden Zugproben, führte dies zu dem Phänomen, dass die zuvor gedruckte Schicht nicht direkt abkühlen kann, ehe dann die nächste Schicht gedruckt wird. Es ist gelungen stehende Zugproben zu drucken, indem die Druckgeschwindigkeit deutlich verringert und die Lüfterdrehzahl auf 60\% reduziert ist. Jedoch sind die Proben beim Versand zu \textit{L.B. Bohle} in dem Päckchen zerstört. Daher wird sich im Rahmen dieser Arbeit auf den Vergleich zwischen den liegenden Zugproben hinsichtlich der mechanischen Kennwerte bezogen.
 Im Slicer sind dann in x- und y-Richtung um 17\% vergrößert und in z-Richtung sind sie 20\% größer gedruckt. Damit ist sichergestellt, dass die Zugproben im gesinterten Zustand die DIN-Norm einhalten. Die fertig gesinterten Zugproben werden dann in eine Zugprüfmaschine an beide Seiten eingespannt und bis zur Zerstörung gezogen. Die benötigte Kraft, sowie die entstehende Längung bilden die Grundlage für das entstehende Spannungs-Dehnungs-Diagramm.
 Das zugehörige Spannungs-Dehnungs-Diagramm ist in \autoref{ZugprobenS} dargestellt, anzumerken ist an dieser Stelle, dass nur \autoref{ZugprobenS} Zugproben enthält, die im Rahmen dieser Arbeit gedruckt sind. Die anderen drei Ergebnisse \autoref{ZugprobenGS}, \autoref{ZugprobenP} und \autoref{ZugprobenT} sind Zugproben, die in der Firma \textit{L.B. Bohle} gedruckt sind. Sie dienen nur als Vergleich.
  
 \section{Vergleich der ermittelten Werte}
 
+\subsection{Vergleich der Dichte}
+
+Die errechnete, durchschnittliche Dichte aus \autoref{Dichte- und Schwindung} beträgt 6,87 \(\text{g/cm}^3\). Verglichen mit dem technischen Datenblatt aus \autoref{Datenblatt1.4404} ist die Dichte dort mit 8 \(\text{g/cm}^3\) angegeben. Dies entspricht einer Abweichung von -14\%. In \Autocite{Quarto.2021} wurde ebenfalls die Dichte an FDM-gedruckten Stahlteilen gemessen, hier lag sie im Durchschnitt bei knapp über 7,2 \(\text{g/cm}^3\). Dies entspricht einer Abweichung von -10\%. Dieser Wert ist mit den Ergebnissen dieser Arbeit nur bedingt vergleichbar. In \autocite{Quarto.2021} wurde mit \textit{Ultrafuse} von \textit{BASF} gearbeitet. Das Material entspricht ebenfalls Edelstahl der Norm 1.4404. Die Abweichungen von Soll- und Istwerten werden mit \autoref{Abweichungen} errechnet.
+
+\begin{equation}
+  \text{Prozentuale Abweichung} = \left( \frac{\text{Soll-Dichte} - \text{Ist-Dichte}}{\text{Soll-Dichte}} \right) \times 100
+  \label{Abweichungen}
+\end{equation}
+  
 
 
+\subsection{Vergleich der Werte aus dem Zugversuch}
+
+In \autoref{tab:ErgebnisseZugversuch} sind die relevantesten Ergebnisse aus den Zugversuchen aufgelistet. R$_{\textsubscript{p0.2}}$ stellt die Streckgrenze dar. R$_{\textsubscript{m}}$ steht für die Zugfestigkeit und A$_{\textsubscript{25 mm}}$ gibt die Bruchdehnung an. Verglichen werden hier die Werte für die Zugversuche der liegend gedruckten Proben. In der ersten Zeile sind die Proben, die im Rahmen dieser Arbeit gedruckt wurden aufgelistet \textit{(FH-Münster)}. In der zweiten Zeile sind die Proben der Firma \textit{L.B. Bohle} dargestellt. In der letzten Zeile \glqq Abweichungen\grqq sind die Abweichungen der ersten und zweiten Zeile von dem Datenblatt dargestellt.
 
 \begin{table}[h]
   \centering
@@ -76,5 +98,6 @@ Das zugehörige Spannungs-Dehnungs-Diagramm ist in \autoref{ZugprobenS} dargeste
     & -11,0 & -20,0 & -37,5 \\
   \bottomrule
   \end{tabular}
-  \label{BeispielTabelle}
+\label{tab:ErgebnisseZugversuch}
 \end{table}
+

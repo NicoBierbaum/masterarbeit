@@ -14,9 +14,9 @@ openright,         % openleft, openright, openany
 numbers=noenddot,  % keinen Punkt hnter Kapitel- oder Sectionnummern
 chapterprefix=off, % Kapitel wird vor die Kapitelnummer geschrieben
 ]{scrbook}
+\sloppy
 %% Preambel einbinden -----------------------------------------------------------------------------
 \input{preambel/preambel.tex}
-
 \begin{document}
 
 %% Titelseite einbinden ---------------------------------------------------------------------------
@@ -45,7 +45,6 @@ chapterprefix=off, % Kapitel wird vor die Kapitelnummer geschrieben
 %% Eigentlicher Inhalt der Arbeit -----------------------------------------------------------------
 %% Einbinden der einzelnen Kapitel. Jedes Kapitel in eine seperate Datei speichern. ---------------
 \mainmatter
-
 \input{inhalt/1_Einleitung.tex}
 \input{inhalt/2_Grundlagen.tex}
 \input{inhalt/3_Experimenteller_Aufbau.tex}

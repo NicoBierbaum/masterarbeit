@@ -33,11 +33,13 @@
 \appto\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
 	\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
 	\do\x\do\y\do\z}
+\usepackage{adjustbox}
 \usepackage{fancybox}				% für Kästen und Boxen
 \usepackage{caption}                % Erweiterte Einstellung für Beschriftungen
 \usepackage{array}                  % erweiterte Optionen
 \usepackage{icomma}                 % verringert den Abstabd hinter dem Komma bei Kommawerten
 \usepackage{setspace}				% Zeilenabstand definieren
+
 
 %% PDF Optionen (Verweise und co) -----------------------------------------------------------------
 \usepackage{pdfpages}
@@ -102,6 +104,8 @@
 % Zeilenabstände verkleinern
 %\setlength{\nomitemsep}{-\parsep}
 \makenomenclature
+\setlength{\headsep}{1.5\baselineskip}
+
 %% ---------------------------------------------------------------------------------------------------
 %% Abkürzungsverzeichnis erstellen: ------------------------------------------------------------------
 %% 1. LATEX Lauf durchführen
