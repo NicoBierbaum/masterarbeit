@@ -16,6 +16,7 @@ Businessplan.pdf
 *.so.*
 *.dll
 *.dylib
+*.pdf
 
 # Qt-es
 object_script.*.Release

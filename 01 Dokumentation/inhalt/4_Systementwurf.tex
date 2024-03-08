@@ -1,0 +1,131 @@
+\chapter{Systementwurf}
+
+\section{Bewegungsprofil des Paddel-Mischers}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{bilder/KS_E-Koordinatensystem_Ebene.png}
+    \caption[Visualisierung des Koordinatensystems auf der schiefen Ebene]{Visualisierung des Koordinatensystems auf der schiefen Ebene (eigene Darstellung)}\label{fig:VisualisierungKoordinatensystemSchiefe}
+\end{figure}
+
+Parameter zur reproduzierbaren Beschreibung der Paddel Bewegung:\\
+
+\textbf{Allgemein:}
+
+
+\begin{equation}
+    \begin{aligned}
+        _{(E)}\vec{p}(t) &= _{(E)}\vec{p_B}(t) + _{(E)}\vec{p_0}\\
+        \text{mit}\\
+        _{(E)}\vec{p}_B(t) &= _{(E)}\left(x_0(t), y_0(t), z_0(t)\right)\\
+        _{(E)}\vec{p_0} &= _{(E)}\left(x_0, y_0, z_0\right)
+    \end{aligned}
+\end{equation}
+
+Der Positionsvektor des Paddel-Mischers zur Zeit \( t \) in Ebene \( (E) \) ist gegeben durch:
+
+\begin{equation}
+    \begin{aligned}
+        _{(E)}\vec{p}_{0} &= (x_{0}, y_{0}, z_{0})\\
+        _{(E)}\vec{p}(t) &= (x, y, z(t)) + \vec{p}_{0}  
+    \end{aligned} 
+\end{equation}
+
+\( z(t) \) ist definiert durch:
+
+\begin{equation}
+    z(t) = -\hat{z}(\cos(\omega t)-1)  \quad \text{mit} \quad \hat{z} = \frac{h}{2}
+\end{equation}
+
+und \( \omega = 2 \pi f = \frac{2 \pi}{T} \).
+
+Zum Beispiel, bei \( t = 0 \):
+
+\begin{equation}
+    z(0) = -\hat{z}(1-1) = 0
+\end{equation}
+
+Beispiel bei \( t = \frac{1}{4}T \):
+
+\begin{equation}
+    \begin{aligned}
+        z\left(\frac{1}{4}T\right) &= -\hat{z}\left(\cos\left(\frac{2\pi T}{T \cdot 4}\right) - 1\right) \\
+        &= -\hat{z}\left(\cos\left(\frac{\pi}{2}\right) - 1\right) \\
+        &= -\hat{z}(0 - 1) = \hat{z} = \frac{1}{2} h
+    \end{aligned}
+\end{equation}
+
+Und bei \( t = \frac{1}{2}T \):
+
+\begin{equation}
+    \begin{aligned}
+        z\left(\frac{1}{2}T\right) &= -\hat{z}\left(\cos\left(\frac{2\pi T}{T \cdot 2}\right) - 1\right) \\
+        &= -\hat{z}\left(\cos(\pi) - 1\right) \\
+        &= -\hat{z}(-1 - 1) = 2\hat{z} = h
+    \end{aligned}
+\end{equation}
+
+
+wobei \( _{(E)}\vec{p(t)} \) die Bewegung des Paddel-Mittelpunkts und \( _{(E)}\vec{p}_{0} \) den Mittelpunkt auf dem Einwegbeutel repräsentiert.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{bilder/cosine-plot.png}
+    \caption[Kosinusfunktion]{klassische Kosinusfunktion (\( cos(T) \)) (eigene Darstellung)}\label{fig:Kosinusfunktion}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{bilder/cosine-plot_real.png}
+    \caption[Darstellung der Paddelbewegung anhand der Cosinusfunktion]{Darstellung der Paddelbewegung anhand der Cosinusfunktion (eigene Darstellung)}\label{fig:PaddelbewegungCos}
+\end{figure}
+
+
+
+
+Beispiel Sinus-Bewegung in \( _{(E)}\) Z-Richtung:
+\begin{equation}
+    \begin{aligned}
+        x &= x_B + x_0\\
+        y &= y_B + y_0\\
+        z(t) &= \hat{z}\left( 1 - \cos(\omega t) \right) +z_0\\
+        \text{mit}\\
+        &\hat{z} = 2h\\
+        &\omega = 2\pi f
+    \end{aligned}
+\end{equation}
+
+\section{Definition der Leistungseinbringung für den Mischprozess}
+
+Grundsätzlich gilt:
+
+\begin{equation}
+    W = F \cdot s \text{   und   } P = \frac{W}{dt}
+\end{equation}
+
+\textbf{Allgemein:}
+
+\begin{equation}
+    W = \int_{t_1}^{t_2} \vec{F}(\vec{s(t)})\cdot d \vec{s}
+\end{equation}
+
+\textbf{In unserem Fall:}
+
+\begin{equation}
+    \begin{aligned}
+        W = \int_{t_1}^{t_2} F_z (z(t))\cdot dz\\
+        W = \int_{t_1}^{t_2} F_z (t)\cdot dz
+    \end{aligned}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{bilder/force-over-distance.png}
+    \caption[Eingebrachte Leistung Weg-über-Zeit-Diagramm]{Eingebrachte Leistung Weg-über-Zeit-Diagramm (eigene Darstellung)}\label{fig:EingebrachteLeistungWegZeit}
+\end{figure}
+\FloatBarrier
+
+\textbf{Diskrete Messpunkte:}
+\begin{equation}
+    W = \sum_{t \in \{t_0; t_0 + T; T_0 + 2T; \dots\}}^{t_n} F_z(t) \cdot \Delta z(t) = \sum_{t \in \{\dots\}}^{t_n} F_z (t) \cdot (z(t+1)-z(t))
+\end{equation}

@@ -1,0 +1,16 @@
+Versuch 1(01.03.2024): Labtainer 50; Spalt 5; Freq 2; Hub 5
+
+Ergebnisse mit Bag:
+	Max. Velocity:  0.03173136603446016  [m/s]
+	Max. Force in z-axis:  29.599952113755865  [N]
+	Average Force in z-axis:  9.998570607886423  [N]
+	Average Power:  0.1378870501136842  [W]
+	Mechanical Work:  13789.568643931296  [Ws]
+
+Leerfahrt:
+	Max. Velocity:  0.031234735519699713  [m/s]
+	Max. Force in z-axis:  1.02248915191521  [N]
+	Average Force in z-axis:  0.044156535909351965  [N]
+	Average Power:  0.0038044081301526057  [W]
+	Mechanical Work:  380.5446343443423  [Ws]
+
