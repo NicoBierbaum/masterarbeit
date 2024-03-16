@@ -3,7 +3,7 @@ set output 'cosine-plot_real.png'
 set title 'Function z(t)'
 set xlabel 't'
 set ylabel 'z(t)'
-set xr [0.0:6.29]
+set xr [0.0:4*pi]
 set yr [0.0:1.5]
 
 # Constants
@@ -13,7 +13,7 @@ hat_z = h / 2.0
 x_0 = 0.5  # Replace with the actual value of x_0
 
 # Define custom x-axis tick positions and labels
-set xtics ('0' 0, 'pi' pi, '2pi' 2*pi)
+set xtics ('0' 0, 'pi' pi, '2pi' 2*pi, '3pi' 3*pi, '4pi' 4*pi)
 set ytics ('0' 0, 'z_0' 0.5, 'z_0+h/2' 1, 'z_0+h' 1.5)
 
 # Define function z(x)

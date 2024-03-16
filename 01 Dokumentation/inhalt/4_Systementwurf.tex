@@ -1,5 +1,32 @@
 \chapter{Systementwurf}
 
+\section{Symbolverzeichnis}
+
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{l l}
+        \hline
+        \textbf{Symbol/Formelzeichen} & \textbf{Beschreibung} \\
+        \hline
+        \((KS)_E\) & Ursprung des Koordinatensystems auf der schiefen Ebene \\
+        \( _{(E)}\vec{p}(t) \) & 3D-Vektor der Gesamtbewegung in Ebene \((KS)_E\)\\
+        \(_{(E)}\vec{p_B} (t) \) & 3D-Vektor der reinen Bewegung in Ebene \((KS)_E\) \\
+        \(_{(E)}\vec{p_0}\) & 3D-Startvektor. Durch Eingabe des Nutzers (Spaltbreite)\\
+        \(z(t)\) & Bewegungsgleichung der Robotertrajektorie \\
+        \(\hat{z}\) & Eingabe des Benutzers für die Hubhöhe\\
+        \(\omega\) & Kreisfrequenz \\
+        \(f\) & Eingabe des Nutzers für die Frequenz \\
+        \(W\) & Physikalische Arbeit \\
+        \(F\) & Physikalische Kraft \\
+        \(P\) & Physikalische Leistung \\
+        
+
+        \hline
+    \end{tabular}
+    \caption{Symbol- und Formelzeichenverzeichnis}
+\end{table}
+
 \section{Bewegungsprofil des Paddel-Mischers}
 
 \begin{figure}[h]
@@ -8,7 +35,7 @@
     \caption[Visualisierung des Koordinatensystems auf der schiefen Ebene]{Visualisierung des Koordinatensystems auf der schiefen Ebene (eigene Darstellung)}\label{fig:VisualisierungKoordinatensystemSchiefe}
 \end{figure}
 
-Parameter zur reproduzierbaren Beschreibung der Paddel Bewegung:\\
+\noindent Im Folgenden werden die drei Parameter zur reproduzierbaren Beschreibung der Paddel Bewegung in allen drei Bewegungsrichtungen beschrieben. Hierbei ist \( _{(E)}\vec{p}(t) \) stellvertretend für die Gesamtbewegung in Koordinatensystem \((KS)_E\). \(_{(E)}\vec{p_B} (t) \) beschreibt die veränderliche Position ausgehend von \(_{(E)}\vec{p_0}\).\\
 
 \textbf{Allgemein:}
 
@@ -17,12 +44,15 @@ Parameter zur reproduzierbaren Beschreibung der Paddel Bewegung:\\
     \begin{aligned}
         _{(E)}\vec{p}(t) &= _{(E)}\vec{p_B}(t) + _{(E)}\vec{p_0}\\
         \text{mit}\\
-        _{(E)}\vec{p}_B(t) &= _{(E)}\left(x_0(t), y_0(t), z_0(t)\right)\\
+        _{(E)}\vec{p}_B(t) &= _{(E)}\left(x_B(t), y_B(t), z_B(t)\right)\\
         _{(E)}\vec{p_0} &= _{(E)}\left(x_0, y_0, z_0\right)
     \end{aligned}
+    \label{eq:generelleBewegung}
 \end{equation}
 
-Der Positionsvektor des Paddel-Mischers zur Zeit \( t \) in Ebene \( (E) \) ist gegeben durch:
+\autoref{eq:generelleBewegung} ist unabhängig von der eingeleiteten Bewegungsform und Richtung. Es können in \(\vec{p}_B(t)\) alle möglichen Bewegungsformen dargestellt werden.\\
+
+Hier folgt nun die Errechnung anhand einer sinus-förmigen Bewegung entlang der Z-Achse:
 
 \begin{equation}
     \begin{aligned}
@@ -71,15 +101,16 @@ wobei \( _{(E)}\vec{p(t)} \) die Bewegung des Paddel-Mittelpunkts und \( _{(E)}\
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{bilder/cosine-plot.png}
-    \caption[Kosinusfunktion]{klassische Kosinusfunktion (\( cos(T) \)) (eigene Darstellung)}\label{fig:Kosinusfunktion}
+    \caption[Kosinusfunktion]{Klassische Kosinusfunktion (\( cos(t) \)) (eigene Darstellung)}\label{fig:Kosinusfunktion}
 \end{figure}
+\FloatBarrier
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{bilder/cosine-plot_real.png}
-    \caption[Darstellung der Paddelbewegung anhand der Cosinusfunktion]{Darstellung der Paddelbewegung anhand der Cosinusfunktion (eigene Darstellung)}\label{fig:PaddelbewegungCos}
+    \caption[Darstellung der Paddelbewegung anhand der Cosinusfunktion]{Darstellung der Paddelbewegung in Z-Richtung anhand der Cosinusfunktion \( z(t) = -\hat{z}(\cos(\omega t)-1) \) (eigene Darstellung)}\label{fig:PaddelbewegungCos}
 \end{figure}
-
+\FloatBarrier
 
 
 
@@ -97,19 +128,19 @@ Beispiel Sinus-Bewegung in \( _{(E)}\) Z-Richtung:
 
 \section{Definition der Leistungseinbringung für den Mischprozess}
 
-Grundsätzlich gilt:
-
-\begin{equation}
-    W = F \cdot s \text{   und   } P = \frac{W}{dt}
-\end{equation}
-
-\textbf{Allgemein:}
+Allgemein gilt:
 
 \begin{equation}
     W = \int_{t_1}^{t_2} \vec{F}(\vec{s(t)})\cdot d \vec{s}
 \end{equation}
 
-\textbf{In unserem Fall:}
+\noindent Wenn die Kraftrichtung der Bewegungsrichtung gleicht und beide Vektoren in dieselbe Richtung zeigen gilt:
+
+\begin{equation}
+    W = F \cdot s \text{   und   } P = \frac{W}{dt}
+\end{equation}
+
+\noindent In unserem Fall zeigt die Kraft \(F_z\) in die Bewegungsrichtung \(z\), aber sie ist nicht konstant. Daher gilt:
 
 \begin{equation}
     \begin{aligned}
@@ -117,6 +148,8 @@ Grundsätzlich gilt:
         W = \int_{t_1}^{t_2} F_z (t)\cdot dz
     \end{aligned}
 \end{equation}
+
+Der Zusammenhang von Kraft und Weg ist in \autoref{fig:EingebrachteLeistungWegZeit} dargestellt. Bei \(z_0\) liegt die maximale Kraft an, da der Abstand zum Einwegbeutel am geringsten ist.
 
 \begin{figure}[h]
     \centering
@@ -127,5 +160,5 @@ Grundsätzlich gilt:
 
 \textbf{Diskrete Messpunkte:}
 \begin{equation}
-    W = \sum_{t \in \{t_0; t_0 + T; T_0 + 2T; \dots\}}^{t_n} F_z(t) \cdot \Delta z(t) = \sum_{t \in \{\dots\}}^{t_n} F_z (t) \cdot (z(t+1)-z(t))
+    W = \sum_{t \in \{t_0; t_0 + T; T_0 + 2T; \dots; t_n\}}^{} F_z(t) \cdot \Delta z(t) = \sum_{t \in \{t_0; t_1; \dots; t_n\}}^{} F_z (t) \cdot (z(t+1)-z(t))
 \end{equation}
