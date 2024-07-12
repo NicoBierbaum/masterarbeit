@@ -1,0 +1,82 @@
+\chapter{Component Design}
+\section{Software}
+\subsection{Parameterizable Robot Program for Executing the Movement}
+\subsection{Development of an Automated Evaluation Script}
+\subsubsection{For Evaluating the Power Input}
+\subsubsection{For Evaluating the Mixing Time or Suspension (e.g., image-based)}
+\subsubsection{With Easy Usability (for Laboratory Users) e.g., with GUI/Tkinter}
+\subsubsection{Generation of CSV Data and Reports}
+\section{Hardware}
+\subsection{Construction of an Inclined, Angle-Adjustable Support Surface for the Bag}
+\subsection{Construction of Sensor Systems to Determine Mixing Time or Suspension (e.g., Camera + Lighting under the Bag)}
+
+\subsubsection{Integration of Sensor and Camera Systems}
+
+\paragraph{Payload and Center of Gravity Calculation}
+
+The integration of the SCHUNK FT-AXIA 80 sensor and the Robotiq wrist camera requires accurate calculations for the payload and center of gravity to ensure precise and stable operation of the robotic system. The following sections detail these calculations.
+
+\subparagraph{Payload Calculation}
+
+The payload is calculated as the total mass of the sensor, camera, and custom tool:
+
+\begin{equation}
+\text{Payload} = \text{Mass of sensor and adapter} + \text{Mass of camera} + \text{Mass of custom tool}
+\end{equation}
+
+Given:
+\begin{align*}
+\text{Mass of sensor and adapter} &= 0.558 \, \text{kg} \\
+\text{Mass of camera} &= 0.23 \, \text{kg} \\
+\text{Mass of custom tool} &= 0.16243 \, \text{kg}
+\end{align*}
+
+\begin{equation}
+\text{Payload} = 0.558 + 0.23 + 0.16243 = 0.95043 \, \text{kg}
+\end{equation}
+
+\subparagraph{Center of Gravity Calculation}
+
+To find the center of gravity (CG) in the Z direction, the combined CG of all components (sensor, camera, and custom tool) is calculated.
+
+\textbf{Sensor}:
+\begin{align*}
+\text{Mass} &= 0.558 \, \text{kg} \\
+\text{CG in Z direction} &= 22.8 \, \text{mm}
+\end{align*}
+
+\textbf{Camera}:
+\begin{align*}
+\text{Mass} &= 0.23 \, \text{kg} \\
+\text{Total offset in Z direction} &= 23.5 \, \text{mm} + 9 \, \text{mm} + 14.5 \, \text{mm} = 47 \, \text{mm}
+\end{align*}
+
+\begin{equation}
+\text{Combined CG}_{\text{sensor+camera}} = \frac{0.558 \times 22.8 + 0.23 \times 47}{0.558 + 0.23}
+\end{equation}
+
+\begin{equation}
+\text{Combined CG}_{\text{sensor+camera}} = \frac{12.7224 + 10.81}{0.788} = \frac{23.5324}{0.788} = 29.85 \, \text{mm}
+\end{equation}
+
+\textbf{Custom Tool}:
+\begin{align*}
+\text{Mass} &= 0.16243 \, \text{kg} \\
+\text{Total offset in Z direction} &= 30 \, \text{mm} + 18.596 \, \text{mm} = 48.596 \, \text{mm}
+\end{align*}
+
+\begin{equation}
+\text{Combined CG}_{\text{system}} = \frac{(0.788 \times 29.85) + (0.16243 \times 48.596)}{0.95043}
+\end{equation}
+
+\begin{equation}
+\text{Combined CG}_{\text{system}} = \frac{23.5282 + 7.8981}{0.95043} = \frac{31.4263}{0.95043} = 33.07 \, \text{mm}
+\end{equation}
+
+\subparagraph{Summary}
+\begin{itemize}
+    \item \textbf{Payload}: 0.95043 kg
+    \item \textbf{Center of Gravity (Z)}: 33.07 mm
+\end{itemize}
+
+These values incorporate the mass and CG offsets of both the camera and the custom tool, ensuring accurate configuration for the robot setup.

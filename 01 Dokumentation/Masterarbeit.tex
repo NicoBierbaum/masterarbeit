@@ -30,8 +30,8 @@ chapterprefix=off, % Kapitel wird vor die Kapitelnummer geschrieben
 
 
 \input{inhalt/Sperrvermerk.tex}
-\input{inhalt/EidesstattlicheErklaerung.tex}
-\input{inhalt/Vorwort.tex}
+\input{inhalt/Affidavit.tex}
+\input{inhalt/Preface.tex}
 
 %% Inhaltsverzeichnis einbinden -------------------------------------------------------------------
 \pdfbookmark[0]{Inhaltsverzeichnis}{tableofcontents}
@@ -41,18 +41,18 @@ chapterprefix=off, % Kapitel wird vor die Kapitelnummer geschrieben
 \listoffigures              %% Abbildungsverzeichnis
 \listoftables               %% Tabellenverzeichnis
 \lstlistoflistings          %% Quelltextverzeichnis
-\input{inhalt/glossar.tex}  %% Abkuerzungsverzeichnis
+\input{inhalt/glossary.tex}  %% Abkuerzungsverzeichnis
 %% Eigentlicher Inhalt der Arbeit -----------------------------------------------------------------
 %% Einbinden der einzelnen Kapitel. Jedes Kapitel in eine seperate Datei speichern. ---------------
 \mainmatter
-\input{inhalt/1_Einleitung.tex}
-\input{inhalt/2_Technische_Grundlagen.tex}
-\input{inhalt/3_Anforderungsanalyse.tex}
-\input{inhalt/4_Systementwurf.tex}
-\input{inhalt/5_Komponentenentwurf.tex}
-\input{inhalt/6_Implementierung_(optional).tex}
-\input{inhalt/7_ValidierungAuswertung.tex}
-\input{inhalt/8_FazitAusblick.tex}
+\input{inhalt/1_Introduction.tex}
+\input{inhalt/2_Technical_background.tex}
+\input{inhalt/3_Requirements_analysis.tex}
+\input{inhalt/4_System_Design.tex}
+\input{inhalt/5_Component_design.tex}
+\input{inhalt/6_Implementation_(optional).tex}
+\input{inhalt/7_Validation_Evaluation.tex}
+\input{inhalt/8_Conclusion_Outlook.tex}
 
 %% ...
 %%\input{inhalt/Zusammenfassung.tex}
@@ -66,6 +66,6 @@ chapterprefix=off, % Kapitel wird vor die Kapitelnummer geschrieben
      \printbibliography
 \end{flushleft}
 %% Anhang einbinden -------------------------------------------------------------------------------
-\input{inhalt/anhang.tex}
+\input{inhalt/appendix.tex}
 
 \end{document}

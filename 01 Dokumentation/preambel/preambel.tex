@@ -1,193 +1,177 @@
 \UseRawInputEncoding
-\setcounter{secnumdepth}{3}			% 3 Ebenen bei der Kapitelnumerierung
+\setcounter{secnumdepth}{3}         % 3 levels in section numbering
 
-%% nützliche Packet -------------------------------------------------------------------------------
-\usepackage[ngerman]{babel}			% neue deutsche Rechtschreibung
+%% Useful packages -------------------------------------------------------------------------------
+\usepackage[english]{babel}         % English language
 \usepackage{scrhack}
 \usepackage{placeins}
 \usepackage{subcaption}
 \usepackage{lmodern}
 \usepackage{cmbright}
-\usepackage{enumitem}  				% Paket für benutzerdefinierte Aufzählungen
+\usepackage{enumitem}               % Package for customized lists
 \usepackage[OT1]{fontenc}
-\usepackage{blindtext}				% Mit \blindtext wird Dummytext eingefügt
-\usepackage{mdwlist}				% kompaktere Listen mit itemize\cdot und co
-\usepackage{graphicx}				% Grafiken
-\usepackage{epstopdf}               % epsBilder automatisch in pdfBilder konvertieren
-\usepackage{ltxtable}				% longtable und tabularx Pakete (XSpalten)
-\usepackage{multirow}				% Mehrzeiliges in Tabellen
-\usepackage[dvipsnames,table,xcdraw]{xcolor}			% alternierende Farben in Tabellen
-\usepackage{rotating}				% Rotieren von Text & co
-%\usepackage{color}			    	% Alles in Bunt und Farbe
-\usepackage{multicol}				% multicol halt
-\usepackage{amsmath}				% für mathematische Formeln
-\usepackage{amsthm}				    % für theoremstyle
+\usepackage{blindtext}              % Use \blindtext to insert dummy text
+\usepackage{mdwlist}                % More compact lists with itemize and co
+\usepackage{graphicx}               % Graphics
+\usepackage{epstopdf}               % Automatically convert eps images to pdf
+\usepackage{ltxtable}               % Combines longtable and tabularx
+\usepackage{multirow}               % Multi-row cells in tables
+\usepackage[dvipsnames,table,xcdraw]{xcolor}  % Alternating colors in tables
+\usepackage{rotating}               % Rotate text and other elements
+\usepackage{multicol}               % Multicolumn formatting
+\usepackage{amsmath}                % Mathematical formulas
+\usepackage{amsthm}                 % Theorem style
 \usepackage{mathtools}
-\usepackage{amssymb}				% für mathematische Symbole
-\usepackage{wrapfig}				% umflossene figures
-\usepackage{float}				    % für [h!] bzw. [H] positionierung
-\usepackage{booktabs}	            % Für Excel2Latex Tabellen
-\usepackage{eurosym}				% Eurosymbol verwenden
-\usepackage{url}				    % Weblinks einbinden  z.B. http://www.fh-muenster.de
+\usepackage{amssymb}                % Mathematical symbols
+\usepackage{wrapfig}                % Wrapping figures
+\usepackage{float}                  % For [h!] or [H] positioning
+\usepackage{booktabs}               % For tables from Excel to LaTeX
+\usepackage{eurosym}                % Use Euro symbol
+\usepackage{url}                    % URLs
 \usepackage{etoolbox}
 \appto\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
-	\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
-	\do\x\do\y\do\z}
+    \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w
+    \do\x\do\y\do\z}
 \usepackage{adjustbox}
-\usepackage{fancybox}				% für Kästen und Boxen
-\usepackage{caption}                % Erweiterte Einstellung für Beschriftungen
-\usepackage{array}                  % erweiterte Optionen
-\usepackage{icomma}                 % verringert den Abstabd hinter dem Komma bei Kommawerten
-\usepackage{setspace}				% Zeilenabstand definieren
+\usepackage{fancybox}               % Boxes and frames
+\usepackage{caption}                % Extended settings for captions
+\usepackage{array}                  % Extended options for arrays and tables
+\usepackage{icomma}                 % Reduces space after comma in decimal numbers
+\usepackage{setspace}               % Define line spacing
 
-
-%% PDF Optionen (Verweise und co) -----------------------------------------------------------------
+%% PDF options (links and more) -----------------------------------------------------------------
 \usepackage{pdfpages}
-\usepackage{ifxetex}
-\ifxetex
-\usepackage[babel, german=quotes]{csquotes}
-%\usepackage{xltxtra}
-\usepackage{etex}
-\usepackage[dvipsnames]{pstricks}
-\usepackage{pst-plot}
-\usepackage{pstricks-add}
-\usepackage{auto-pst-pdf}
-\else
-\usepackage[utf8]{inputenc}			% UTF-8 encoding
-\usepackage[babel, german=quotes]{csquotes}
+\usepackage[utf8]{inputenc}         % UTF-8 encoding
+\usepackage[english=british]{csquotes}
 \usepackage[pdftex, raiselinks, pdfpagelabels, hypertexnames=false, pdfstartview={Fit}]{hyperref}
 \definecolor{lightblue}{rgb}{0.9,0.9,1}
-\fi
-%% Angaben für die PDF-Datei
+
+%% PDF metadata
 \hypersetup{
-	pdfauthor = {Nico Bierbaum},
-	pdftitle =  {Wissenschaftliche Arbeit},
-	pdfsubject = {Dichte- und Schwindungsauswertung von 316L gedruckten Teilen im FDM-Prozess},
- 	pdfkeywords = {3D-Druck, Filament, Metall, Dichte, Zugversuch, Schwindung},
- 	pdfcreator = {LaTeX with hyperref package}
+    pdfauthor = {Nico Bierbaum},
+    pdftitle =  {Scientific Work},
+    pdfsubject = {Density and Shrinkage Evaluation of 316L Printed Parts in the FDM Process},
+    pdfkeywords = {3D printing, filament, metal, density, tensile test, shrinkage},
+    pdfcreator = {LaTeX with hyperref package}
 }
-%\setlength\parindent{0pt}
-%% Kopf- und Fußzeile -----------------------------------------------------------------------------
+
+%% Header and footer -----------------------------------------------------------------------------
 \usepackage[headsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \clearpairofpagestyles
-%\rehead{\pagemark}
-%\lohead{\pagemark}
-\ihead{\headmark} % Neudefinition
+\ihead{\headmark} % Redefine
 \ohead{\pagemark}
-%\automark[chapter]{section} % Kopfzeile: [rechts]{links}
 
-%% Seitenränder -----------------------------------------------------------------------------------
+%% Page margins -----------------------------------------------------------------------------------
 \usepackage[a4paper,inner=4cm,outer=2.5cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
 
-%% Literaturverzeichnis ---------------------------------------------------------------------------
+%% Bibliography -----------------------------------------------------------------------------------
 \usepackage[style=numeric-comp,sorting=none,backend=biber]{biblatex}
 
-\DeclareFieldFormat{labelalpha}{\textsc{#1}}    % Setzt den Autor in Kapitälchen 
-\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}  % Setzt den Nachnamen in Kapitälchen 
-\renewcommand*{\mkbibnamegiven}[1]{\textsc{#1}}  % Setzt den Vornamen in Kapitälchen 
-\renewcommand*{\mkbibnameprefix}[1]{\textsc{#1}}  % Setzt den Nachnamen in Kapitälchen 
-\DeclareFieldFormat{title}{\glqq{#1}\grqq}      % Setzt den Titel in Anführungszeichen
-\DeclareFieldFormat{date}{({#1})}               % Setzt das Jahr in Klammern
+\DeclareFieldFormat{labelalpha}{\textsc{#1}}    % Sets the author in small caps 
+\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}  % Sets the last name in small caps 
+\renewcommand*{\mkbibnamegiven}[1]{\textsc{#1}}  % Sets the first name in small caps 
+\renewcommand*{\mkbibnameprefix}[1]{\textsc{#1}}  % Sets the prefix in small caps 
+\DeclareFieldFormat{title}{``#1''}      % Sets the title in quotation marks
+\DeclareFieldFormat{date}{({#1})}               % Sets the date in parentheses
 \makeatletter
 \def\blx@maxline{77}
 \makeatother
-\addbibresource{LiteraturDB.bib} % Bibliographie laden
+\addbibresource{LiteratureDB.bib} % Load bibliography
 
-%% Abkürzungsverzeichnis: -------------------------------------------------------------------------
+%% Glossary and abbreviations ---------------------------------------------------------------------
 \usepackage{nomencl}
-% Deutsche Überschrift
-\renewcommand{\nomname}{Glossar und Abkürzungsverzeichnis}
-% Punkte zwischen Abkürzung und Erklärung
+% English title
+\renewcommand{\nomname}{Glossary and List of Abbreviations}
+% Dots between abbreviation and explanation
 \setlength{\nomlabelwidth}{.20\hsize}
 \renewcommand{\nomlabel}[1]{#1 \dotfill}
-% Zeilenabstände verkleinern
+% Reduce line spacing
 %\setlength{\nomitemsep}{-\parsep}
 \makenomenclature
 \setlength{\headsep}{1.5\baselineskip}
 
 %% ---------------------------------------------------------------------------------------------------
-%% Abkürzungsverzeichnis erstellen: ------------------------------------------------------------------
-%% 1. LATEX Lauf durchführen
-%% 2. Ein DOS-Fenster (Eingabeaufforderung) öffen und in den Ordner mit der Datei "thesis.tex" wechseln.
-%% 3. Den Befehl   makeindex thesis.nlo -s nomencl.ist -o thesis.nls   ausführen
-%% 4. LATEX Lauf durchführen. Das Abkürzungsverzeichnis sollte jetzt vorhanden sein.
+%% Create glossary and abbreviations: ------------------------------------------------------------------
+%% 1. Run LATEX
+%% 2. Open a command prompt and navigate to the folder with the "thesis.tex" file.
+%% 3. Run the command   makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+%% 4. Run LATEX again. The glossary and abbreviations should now be present.
 
-%% Quelltexte -------------------------------------------------------------------------------------
+%% Source code -------------------------------------------------------------------------------------
 \usepackage{listings}
 \lstset{ %
-	basicstyle=\scriptsize, 		% the size of the fonts that are used for the code
-	numbers=left,				% where to put the line-numbers
-	numberstyle=\footnotesize,		% the size of the fonts that are used for the line-numbers
-	backgroundcolor=\color{white},		% choose the background color. You must add \usepackage{color}
-	commentstyle=\color{green},
-	stringstyle =\color{orange},
-	xleftmargin=1.5em,
-	xrightmargin=1em,
-	frame=tb,				% adds a frame around the code
-	tabsize=2,				% sets default tabsize to 2 spaces
-	captionpos=b,				% sets the caption-position to top or bottom
-	breaklines=true,			% sets automatic line breaking
-	breakatwhitespace=false			% sets if automatic breaks should only happen at whitespace
-	literate =%
-	 {#}{\#}1
+    basicstyle=\scriptsize,         % the size of the fonts that are used for the code
+    numbers=left,                   % where to put the line-numbers
+    numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+    backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+    commentstyle=\color{green},
+    stringstyle =\color{orange},
+    xleftmargin=1.5em,
+    xrightmargin=1em,
+    frame=tb,                       % adds a frame around the code
+    tabsize=2,                      % sets default tabsize to 2 spaces
+    captionpos=b,                   % sets the caption-position to top or bottom
+    breaklines=true,                % sets automatic line breaking
+    breakatwhitespace=false         % sets if automatic breaks should only happen at whitespace
+    literate =%
+     {#}{\#}1
 }
-\renewcommand*{\lstlistingname}{Quelltext}
-\renewcommand*{\lstlistlistingname}{Quelltextverzeichnis}
+\renewcommand*{\lstlistingname}{Source Code}
+\renewcommand*{\lstlistlistingname}{List of Source Codes}
 
-%% Tikz für (komplizierte) bunte Bildchen ---------------------------------------------------------
+%% Tikz for (complex) colorful drawings ---------------------------------------------------------
 \usepackage{tikz}
 \usetikzlibrary{positioning,mindmap,shapes,shapes.multipart,shadows,arrows,patterns,topaths}
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=newest}
 
-\definecolor{gelb}{HTML}{FFFCCC}
-\definecolor{gruen}{HTML}{CFFFCC}
-\definecolor{blau}{HTML}{CCE9FF}
-\definecolor{dunkelblau}{HTML}{99b7EE}
-\definecolor{rot}{HTML}{FFA8A8}
+\definecolor{yellow}{HTML}{FFFCCC}
+\definecolor{green}{HTML}{CFFFCC}
+\definecolor{blue}{HTML}{CCE9FF}
+\definecolor{darkblue}{HTML}{99b7EE}
+\definecolor{red}{HTML}{FFA8A8}
 \definecolor{orange}{HTML}{FFD28F}
 
 \lstset
 {
-	breaklines=true,
-	tabsize=3,
-	showstringspaces=false
+    breaklines=true,
+    tabsize=3,
+    showstringspaces=false
 }
-
 
 \lstdefinestyle{Common}
 {
-	extendedchars=\true,
-	language={[Visual]Basic},
-	frame=single,
-	%===========================================================
-	framesep=3pt,%expand outward.
-	framerule=0.4pt,%expand outward.
-	xleftmargin=3.4pt,%make the frame fits in the text area. 
-	xrightmargin=3.4pt,%make the frame fits in the text area.
-	%=========================================================== 
-	rulecolor=\color{Red}
+    extendedchars=true,
+    language={[Visual]Basic},
+    frame=single,
+    %===========================================================
+    framesep=3pt,%expand outward.
+    framerule=0.4pt,%expand outward.
+    xleftmargin=3.4pt,%make the frame fits in the text area. 
+    xrightmargin=3.4pt,%make the frame fits in the text area.
+    %=========================================================== 
+    rulecolor=\color{Red}
 }
 
 \lstdefinestyle{A}
 {
-	style=Common,
-	backgroundcolor=\color{Yellow!10},
-	basicstyle=\scriptsize\color{Black}\ttfamily,
-	keywordstyle=\color{Orange},
-	identifierstyle=\color{Cyan},
-	stringstyle=\color{Red},
-	commentstyle=\color{Green}
+    style=Common,
+    backgroundcolor=\color{Yellow!10},
+    basicstyle=\scriptsize\color{Black}\ttfamily,
+    keywordstyle=\color{Orange},
+    identifierstyle=\color{Cyan},
+    stringstyle=\color{Red},
+    commentstyle=\color{Green}
 }
 
 \lstdefinestyle{B}
 {
-	style=Common,
-	backgroundcolor=\color{Black},
-	basicstyle=\scriptsize\color{White}\ttfamily,
-	keywordstyle=\color{Orange},
-	identifierstyle=\color{Cyan},
-	stringstyle=\color{Red},
-	commentstyle=\color{Green}
+    style=Common,
+    backgroundcolor=\color{Black},
+    basicstyle=\scriptsize\color{White}\ttfamily,
+    keywordstyle=\color{Orange},
+    identifierstyle=\color{Cyan},
+    stringstyle=\color{Red},
+    commentstyle=\color{Green}
 }
