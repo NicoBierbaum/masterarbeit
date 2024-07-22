@@ -1,8 +1,26 @@
 \chapter{Component Design}
+
+In this chapter the system design out of \autoref{sec:SystemDesign} gets applied. 
+
 \section{Software}
+
+Software is a fundamental part of the design of this thesis. To combine all components (e.g. Camera, force sensor, report, HMI) a software is needed. 
+
 \subsection{Parameterizable Robot Program for Executing the Movement}
+
+
+
 \subsection{Development of an Automated Evaluation Script}
 \subsubsection{For Evaluating the Power Input}
+
+In \autoref{sec:Motion Profile of the Paddle Mixer}, the theoretical background about the calculation of the input power is described. In this subsubsection the equations are translated to python code.
+
+\begin{python}
+    class MyClass(Yourclass):
+        def __init__(self, my, yours):
+            bla = '5 1 2 3 4'
+            print bla
+\end{python}
 \subsubsection{For Evaluating the Mixing Time or Suspension (e.g., image-based)}
 \subsubsection{With Easy Usability (for Laboratory Users) e.g., with GUI/Tkinter}
 \subsubsection{Generation of CSV Data and Reports}
